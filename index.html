@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hanalika Tailwind CSS</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- FONT AWESOME CDNJS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+    <!-- Script Darkmode Theme Local Storage -->
+    <script>
+      if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navbar Section Start -->
+    <header id="navbar" class="fixed top-0 left-0 z-10 flex w-full items-center bg-white bg-transparent bg-opacity-70 shadow-lg backdrop-blur-sm dark:bg-dark dark:bg-opacity-50">
+      <div class="container">
+        <div class="flex items-center justify-between">
+          <div class="px-4">
+            <a href="#home" class="block py-6 text-lg font-bold text-primary hover:opacity-80">HANALIKA</a>
+          </div>
+          <div class="flex items-center px-4">
+            <button id="hamburger" name="hamburger" type="button" class="sticky right-4 block lg:hidden">
+              <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <nav id="nav-menu" class="absolute right-0 top-full hidden w-full bg-white py-5 shadow-lg dark:bg-dark lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent">
+        <ul class="block lg:mx-0 lg:flex">
+          <li class="group">
+            <a href="#home" class="mx-6 flex justify-center py-2 text-base text-dark group-hover:text-primary dark:text-white">Beranda</a>
+          </li>
+          <li class="group">
+            <a href="#about" class="mx-6 flex justify-center py-2 text-base text-dark group-hover:text-primary dark:text-white">About</a>
+          </li>
+          <li class="group">
+            <a href="#service" class="mx-6 flex justify-center py-2 text-base text-dark group-hover:text-primary dark:text-white">Service</a>
+          </li>
+          <li class="group">
+            <a href="#projects" class="mx-6 flex justify-center py-2 text-base text-dark group-hover:text-primary dark:text-white">Projects</a>
+          </li>
+          <li class="group">
+            <a href="#contact" class="mx-6 flex justify-center py-2 text-base text-dark group-hover:text-primary dark:text-white">Contact Us</a>
+          </li>
+          <li class="mt-3 flex items-center justify-center lg:mt-0">
+            <div class="flex">
+              <input type="checkbox" class="hidden" id="dark-toggle" />
+              <label for="dark-toggle">
+                <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                  <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                </div>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Navbar Section End -->
+
+    <!-- Jumbotron Section Start -->
+    <section id="home" class="jumbotron pt-20">
+      <div class="container-fluid">
+        <div class="flex flex-wrap">
+          <img src="dist/img/hero2.jpg" alt="" class="h-[360px] w-full" />
+        </div>
+      </div>
+
+      <!-- Hero Section Start -->
+      <section class="bg-slate-100">
+        <div class="container">
+          <div class="flex flex-wrap">
+            <div class="infopanel -mt-28 w-full bg-white px-4 dark:bg-dark">
+              <h1 class="mb-3 text-base font-semibold text-primary">HANALIKA PROJECT</h1>
+              <h2 class="mb-5 text-center text-3xl font-bold text-[#056839] dark:text-slate-200 lg:text-4xl">JASA PEMBUATAN TAMAN</h2>
+              <p class="mb-10 font-medium leading-relaxed text-secondary dark:text-slate-100">
+                Kami merupakan penyedia jasa pembuatan taman, mulai dari taman minimalis untuk halaman rumah, taman landscape, taman dinding (vertical garden). Kami juga menyediakan jasa layanan perawatan taman (garden maintenance), Kolam
+                minimalis dan event decoration (dekorasi taman untuk sebuah acara) se-JABODETABEK (Jakarta, Bogor, Depok, Tangerang dan Bekasi).
+              </p>
+              <a href="#" class="mx-auto mb-5 flex h-10 w-48 justify-center rounded-full bg-[#0A8405] px-4 py-2 text-center text-base font-medium text-white hover:border hover:border-white hover:opacity-80"
+                ><i class="fa-brands fa-whatsapp"></i><span class="ml-2">Whatsapp</span></a
+              >
+              <p class="mb-5 font-medium leading-relaxed text-secondary dark:text-white">Atau telp kami di</p>
+              <a href="#" class="mb-5 text-center text-3xl font-bold text-[#0A8405] hover:opacity-80 dark:text-slate-200 dark:hover:text-primary">+62 821-XXX-XXX</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- Jumbotron section End -->
+
+    <!-- Social Media Section Start -->
+    <section id="sosmed" class="mb-0 bg-slate-100 pb-0 pt-20 lg:bg-slate-100">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 text-left">
+            <!-- SOCIAL MEDIA -->
+            <div class="flex">
+              <h2 class="mb-5 mr-3 flex py-1 text-lg font-medium text-slate-300 dark:text-slate-700">Follow Us :</h2>
+              <!-- Whatsapp -->
+              <a href="#" target="blank" class="mr-3 flex h-9 w-9 justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>WhatsApp</title>
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                  />
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a href="#" target="blank" class="mr-3 flex h-9 w-9 justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Instagram</title>
+                  <path
+                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                  />
+                </svg>
+              </a>
+              <!-- Twitter -->
+              <a href="#" target="blank" class="mr-3 flex h-9 w-9 justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Twitter</title>
+                  <path
+                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                  />
+                </svg>
+              </a>
+              <!-- Tiktok -->
+              <a href="#" target="blank" class="mr-3 flex h-9 w-9 justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>TikTok</title>
+                  <path
+                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                  />
+                </svg>
+              </a>
+              <!-- DISCORD -->
+              <a href="#" target="blank" class="mr-3 flex h-9 w-9 justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Discord</title>
+                  <path
+                    d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="dark:bg-dark">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f1f5f9" fill-opacity="1" d="M0,288L480,256L960,288L1440,96L1440,0L960,0L480,0L0,0Z"></path></svg>
+    </div>
+    <!-- Social Media Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="pt-32 dark:bg-dark">
+      <div class="container">
+        <div class="w-full px-4">
+          <h4 class="mb-3 text-lg font-bold uppercase text-primary">About Us</h4>
+          <h2 class="mb-5 max-w-md text-3xl font-bold text-dark dark:text-white lg:text-4xl">Hanalika Project</h2>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="mb-10 w-full px-4 lg:w-1/2">
+            <p class="max-w-xl text-sm text-secondary dark:text-slate-300 lg:text-lg">
+              Kami adalah situs jasa pembuatan taman online, untuk memudahkan konsumen atau bagi Anda yang menginginkan pembuatan taman dengan cepat dan tanpa harus susah mencari jasa pembuatan taman diluar sana.
+            </p>
+            <br />
+            <p class="max-w-xl text-base font-medium text-secondary dark:text-slate-300 lg:text-lg">
+              Cukup hubungi kami dengan menggunakan fasilitas Chat WA di website ini, dan Anda bisa bertanya mengenai apapun mulai dari harga hingga jasa layanan Kami.
+            </p>
+          </div>
+          <div id="list-service" class="w-full px-4 lg:w-1/2">
+            <!-- <h3 class="mb-4 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl">Our Service</h3> -->
+            <ul>
+              <li>
+                <span class="icon check"><i class="fas fa-check"></i></span>
+                <span class="list-name">Jasa Pembuatan Taman</span>
+              </li>
+              <li>
+                <span class="icon check"><i class="fas fa-check"></i></span>
+                <span class="list-name">Jasa Perawatan Taman</span>
+              </li>
+              <li>
+                <span class="icon check"><i class="fas fa-check"></i></span>
+                <span class="list-name">Jasa Pembuatan Vertical Garden</span>
+              </li>
+              <li>
+                <span class="icon check"><i class="fas fa-check"></i></span>
+                <span class="list-name">Jasa Pembuatan Kolam Minimalis</span>
+              </li>
+              <li>
+                <span class="icon check"><i class="fas fa-check"></i></span>
+                <span class="list-name">Jasa Pembuatan Taman Dekorasi</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="dark:bg-dark">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f1f5f9" fill-opacity="1" d="M0,288L480,192L960,256L1440,224L1440,320L960,320L480,320L0,320Z"></path></svg>
+    </div>
+    <!-- About Section End -->
+
+    <!-- Service Section Start -->
+    <section id="service" class="bg-slate-100 pt-20">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">Service</h4>
+            <h2 class="mb-4 text-3xl font-bold text-dark">ABOUT SERVICE</h2>
+            <p class="text-md font-medium text-secondary">Kami adalah penyedia jasa yang melayani berbagai macam project pembuatan taman dan kolam minimalis</p>
+          </div>
+        </div>
+        <!-- Service Image Column Start -->
+        <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
+          <div class="pt-6 lg:columns-3">
+            <div class="mb-6 rounded-md bg-green-800 p-4 text-center shadow-lg lg:h-full" data-aos="fade-up" data-aos-duration="500">
+              <div class="mb-10 flex justify-center overflow-hidden rounded-md">
+                <img src="dist/img/logo1.png" alt="..." width="w-full" class="fill-current" />
+              </div>
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-white">Jasa Pembuatan & Perawatan Taman</h3>
+              <p class="font-sm text-base text-white">Kami menyediakan jasa pembuatan dan layanan perawatan pertamanan dengan hasil memuaskan</p>
+            </div>
+            <div class="mb-6 rounded-md p-4 text-center shadow-lg lg:h-full" style="background: #07992b" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+              <div class="mb-10 flex justify-center overflow-hidden rounded-md">
+                <img src="dist/img/logo2.png" alt="..." width="w-full" class="fill-current" />
+              </div>
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-white">Tanaman Dengan Kualitas Terbaik</h3>
+              <p class="font-sm text-base text-white">Kami menyediakan tanaman berkualitas agar dapat memberikan hasil terbaik dalam pembuatan dan perawatan taman</p>
+            </div>
+            <div class="mb-6 rounded-md bg-green-600 p-4 text-center shadow-lg lg:h-full" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+              <div class="mb-10 flex justify-center overflow-hidden rounded-md">
+                <img src="dist/img/logo3.png" alt="..." width="w-full" class="fill-current" />
+              </div>
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-white">Tenaga Ahli Berpengalaman</h3>
+              <p class="font-sm text-base text-white">bersama tim dari orang-orang yang telah berpengalaman dan profesional di dalam bidang pertamanan</p>
+            </div>
+          </div>
+        </div>
+        <!-- Service Image Column End -->
+      </div>
+    </section>
+    <div class="dark:bg-dark">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f1f5f9" fill-opacity="1" d="M0,288L480,256L960,288L1440,96L1440,0L960,0L480,0L0,0Z"></path></svg>
+    </div>
+    <!-- Service Section End -->
+
+    <!-- Projects Section Start -->
+    <section id="projects" class="pt-36 pb-32 dark:bg-dark">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">Projects</h4>
+            <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">LAYANAN KAMI</h2>
+            <p class="text-md font-medium text-secondary md:text-lg">Kami menyediakan layanan jasa untuk berbagai macam project pembuatan taman dan kolam</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap">
+          <div class="mb-6 w-full px-4 md:w-1/2 lg:w-1/3" data-aos="fade-up" data-aos-duration="500">
+            <div class="overflow-hidden rounded-xl bg-white shadow-lg dark:border dark:border-primary dark:bg-slate-800 lg:h-full">
+              <img src="dist/img/tamansquare1.jpeg" alt="" class="w-full shadow-sm" />
+              <div class="py-8 px-6">
+                <h3>
+                  <a href="#" class="mb-3 block truncate text-base font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-primary">Taman Minimalis</a>
+                </h3>
+                <p class="mb-4 text-base font-medium text-secondary">Kami menyediakan pelayanan pembuatan taman minimalis untuk halaman rumah, baik dengan tanaman sintetis maupun tanaman hidup dengan produk yang berkualitas.</p>
+                <a href="#" class="mx-auto flex h-10 w-48 justify-center rounded-full bg-primary px-4 py-2 text-center text-base font-medium text-white hover:opacity-80 dark:hover:bg-white dark:hover:text-primary dark:hover:opacity-100"
+                  >Order Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="mb-6 w-full px-4 md:w-1/2 lg:w-1/3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+            <div class="overflow-hidden rounded-xl bg-white shadow-lg dark:border dark:border-primary dark:bg-slate-800 lg:h-full">
+              <img src="dist/img/vgsquare3.jpg" alt="" class="w-full shadow-sm" />
+              <div class="py-8 px-6">
+                <h3>
+                  <a href="#" class="mb-3 block truncate font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-primary">Vertical Garden</a>
+                </h3>
+                <p class="mb-4 text-base font-medium text-secondary">Kami menyediakan pelayanan pembuatan taman dinding (vertical garden), baik dengan tanaman sintetis maupun tanaman hidup dengan produk yang berkualitas.</p>
+                <a href="#" class="mx-auto flex h-10 w-48 justify-center rounded-full bg-primary px-4 py-2 text-center text-base font-medium text-white hover:opacity-80 dark:hover:bg-white dark:hover:text-primary dark:hover:opacity-100"
+                  >Order Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="mb-6 w-full px-4 md:w-1/2 lg:w-1/3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <div class="overflow-hidden rounded-xl bg-white shadow-lg dark:border dark:border-primary dark:bg-slate-800 lg:h-full">
+              <img src="dist/img/landscapesquare1.jpg" alt="" class="w-full shadow-sm" />
+              <div class="py-8 px-6">
+                <h3>
+                  <a href="#" class="mb-3 block truncate font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-primary">Taman Landscape</a>
+                </h3>
+                <p class="mb-4 text-base font-medium text-secondary">Kami menyediakan pelayanan pembuatan taman landscape untuk dekorasi dan memperindah halaman rumah, kantor dan jalan.</p>
+                <a href="#" class="mx-auto flex h-10 w-48 justify-center rounded-full bg-primary px-4 py-2 text-center text-base font-medium text-white hover:opacity-80 dark:hover:bg-white dark:hover:text-primary dark:hover:opacity-100"
+                  >Order Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="mb-6 w-full px-4 md:w-1/2 lg:w-1/3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <div class="overflow-hidden rounded-xl bg-white shadow-lg dark:border dark:border-primary dark:bg-slate-800 lg:h-full">
+              <img src="dist/img/kolamsquare5.jpg" alt="" class="w-full shadow-sm" />
+              <div class="py-8 px-6">
+                <h3>
+                  <a href="#" class="mb-3 block truncate font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-primary">Kolam Minimalis</a>
+                </h3>
+                <p class="mb-4 text-base font-medium text-secondary">Kami menyediakan pelayanan pembuatan kolam minimalis, kolam ikan, dengan berbagai macam design dan bahan yang berkualitas.</p>
+                <a href="#" class="mx-auto flex h-10 w-48 justify-center rounded-full bg-primary px-4 py-2 text-center text-base font-medium text-white hover:opacity-80 dark:hover:bg-white dark:hover:text-primary dark:hover:opacity-100"
+                  >Order Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="mb-6 w-full px-4 md:w-1/2 lg:w-1/3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+            <div class="overflow-hidden rounded-xl bg-white shadow-lg dark:border dark:border-primary dark:bg-slate-800 lg:h-full">
+              <img src="dist/img/eventsquare1.jpg" alt="" class="w-full shadow-sm" />
+              <div class="py-8 px-6">
+                <h3>
+                  <a href="#" class="mb-3 block truncate font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-primary">Event Decoration</a>
+                </h3>
+                <p class="mb-4 text-base font-medium text-secondary">Kami menyediakan pelayanan pertamanan untuk suatu acara atau event decoration, baik dengan menggunakan tanaman sintetis maupun tanaman hidup.</p>
+                <a href="#" class="mx-auto flex h-10 w-48 justify-center rounded-full bg-primary px-4 py-2 text-center text-base font-medium text-white hover:opacity-80 dark:hover:bg-white dark:hover:text-primary dark:hover:opacity-100"
+                  >Order Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="mb-6 w-full px-4 md:w-1/2 lg:w-1/3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <div class="overflow-hidden rounded-xl bg-white shadow-lg dark:border dark:border-primary dark:bg-slate-800 lg:h-full">
+              <img src="dist/img/perawatansquare1.jpg" alt="" class="w-full shadow-sm" />
+              <div class="py-8 px-6">
+                <h3>
+                  <a href="#" class="mb-3 block truncate font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-primary">Maintenance (Perawatan Taman)</a>
+                </h3>
+                <p class="mb-4 text-base font-medium text-secondary">Selain pembuatan taman, dengan tenaga kerja yang berpengalaman, kami juga menyediakan jasa perawatan untuk taman anda.</p>
+                <a href="#" class="mx-auto flex h-10 w-48 justify-center rounded-full bg-primary px-4 py-2 text-center text-base font-medium text-white hover:opacity-80 dark:hover:bg-white dark:hover:text-primary dark:hover:opacity-100"
+                  >Order Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects Section End -->
+
+    <!-- Footer Section Start -->
+    <footer id="contact" class="bg-dark pt-24 pb-12 dark:bg-slate-800">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
+            <h2 class="mb-5 text-4xl font-bold text-white">HANALIKA</h2>
+            <div class="mb-5 flex">
+              <!-- Facebook -->
+              <a href="#" target="blank" class="mr-3 flex h-9 w-9 justify-center rounded-full border border-slate-300 text-center text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                <i class="fa-brands fa-facebook-f m-auto text-[20px]"></i>
+              </a>
+              <!-- Instagram -->
+              <a href="#" target="blank" class="mr-3 flex h-9 w-9 justify-center rounded-full border border-slate-300 text-slate-300 hover:border-rose-600 hover:bg-white hover:text-rose-600">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Instagram</title>
+                  <path
+                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                  />
+                </svg>
+              </a>
+              <!-- Twitter -->
+              <a href="#" target="blank" class="mr-3 flex h-9 w-9 justify-center rounded-full border border-slate-300 text-slate-300 hover:border-[#0d6efd] hover:bg-[#0d6efd] hover:text-white">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Twitter</title>
+                  <path
+                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                  />
+                </svg>
+              </a>
+              <!-- Whatsapp -->
+              <a href="#" target="blank" class="mr-3 flex h-9 w-9 justify-center rounded-full border border-slate-300 text-slate-300 hover:border-green-500 hover:bg-green-500 hover:text-white">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>WhatsApp</title>
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
+            <h3 class="mb-5 text-xl font-semibold text-white">Hyperlink</h3>
+            <ul class="text-slate-300">
+              <li>
+                <a href="#home" class="mb-3 inline-block text-base hover:text-primary">Beranda</a>
+              </li>
+              <li>
+                <a href="#about" class="mb-3 inline-block text-base hover:text-primary">About</a>
+              </li>
+              <li>
+                <a href="#service" class="mb-3 inline-block text-base hover:text-primary">Service</a>
+              </li>
+              <li>
+                <a href="#projects" class="mb-3 inline-block text-base hover:text-primary">Projects</a>
+              </li>
+              <li>
+                <a href="#contact" class="mb-3 inline-block text-base hover:text-primary">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
+            <h3 class="mb-5 text-xl font-semibold text-white">Contact Information</h3>
+
+            <div class="contact-list">
+              <ul>
+                <li>
+                  <span class="icon check"><i class="fas fa-map-marker-alt"></i></span>
+                  <span class="list-name">Jl. Mayor Oking Jaya Atmaja No.63, Cibinong, Bogor 16918</span>
+                </li>
+                <li>
+                  <span class="icon check"><i class="fas fa-envelope"></i></span>
+                  <span class="list-name">cs@hanalika.id</span>
+                </li>
+                <li>
+                  <span class="icon check"><i class="fas fa-headset"></i></span>
+                  <span class="list-name">+6221-5091-9981</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="copyright" class="w-full border-t border-slate-700 pt-10">
+          <p class="text-center text-sm font-medium text-slate-500">Created by Egi Saputra, <a href="#home" class="font-bold text-slate-200 hover:text-sky-500">Hanalika Project</a> Copyright ©2022. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Back To Top Start -->
+    <a href="#home" id="to-top" class="fixed bottom-6 right-4 z-[9999] flex h-9 w-9 justify-center rounded-full border border-slate-300 bg-sky-400 text-white hover:border-sky-400 hover:bg-slate-100 hover:text-sky-400">
+      <svg role="img" width="14" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <title>back to top</title>
+        <path
+          d="M12.468.186a.7.7 0 0 0-.95 0L1.924 9.193a1.705 1.705 0 0 0-.475 1.095v3.59c0 .358.214.452.475.207l9.601-9.01a.705.705 0 0 1 .95 0l9.603 9.01c.262.245.475.151.475-.207v-3.59a1.71 1.71 0 0 0-.475-1.095zm0 9.783a.705.705 0 0 0-.95 0l-9.595 9.002a1.705 1.705 0 0 0-.475 1.094v3.59c0 .358.214.453.475.208l9.601-9.007a.701.701 0 0 1 .95 0l9.603 9.008c.262.244.475.15.475-.208v-3.59a1.71 1.71 0 0 0-.475-1.094Z"
+        />
+      </svg>
+    </a>
+    <!-- Back To Top End -->
+
+    <script src="dist/js/script.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
